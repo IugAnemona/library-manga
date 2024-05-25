@@ -5,7 +5,7 @@ export const Root: React.FC = () => {
   return (
     <>
       <TopBar />
-      <div className="m-16">
+      <div className="mt-24">
         <Outlet />
       </div>
     </>
