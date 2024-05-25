@@ -1,6 +1,6 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { TopMangaCard } from './TopMangaCard';
-import { Link, useLoaderData } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 import { MangaDataType } from '@/api/models/manga.interface';
 import Autoplay from 'embla-carousel-autoplay';
 
@@ -25,9 +25,7 @@ export function TopMangasCarousel() {
             key={index}
             className="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5 xl:basis-1/6 2xl:basis-1/6"
           >
-            <Link to={`https://myanimelist.net/manga/${manga.mal_id}`}>
-              <TopMangaCard manga={manga} />
-            </Link>
+            <TopMangaCard manga={manga} />
           </CarouselItem>
         ))}
       </CarouselContent>
