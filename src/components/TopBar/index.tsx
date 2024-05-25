@@ -14,21 +14,6 @@ export default function TopBar() {
               Home
             </a>
           </li>
-          <li>
-            <a href="#" className="hover:text-gray-400">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#" className="hover:text-gray-400">
-              Services
-            </a>
-          </li>
-          <li>
-            <a href="#" className="hover:text-gray-400">
-              Contact
-            </a>
-          </li>
         </ul>
 
         <div className="md:hidden">
