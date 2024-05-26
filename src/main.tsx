@@ -4,7 +4,8 @@ import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Root } from './routes/root';
 import Index from './routes';
-import { getTopMangas } from './api/mangaApi';
+import { mangaInfoLoader, getTopMangas } from './api/mangaApi';
+import MangaInfoPage from './routes/manga';
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,13 @@ const router = createBrowserRouter([
         index: true,
         element: <Index />,
         loader: getTopMangas,
+      },
+      {
+        path: 'manga/:mangaId',
+        element: <MangaInfoPage />,
+        loader: async ({ params }) => {
+          return mangaInfoLoader(params.mangaId);
+        },
       },
     ],
   },

@@ -3,13 +3,13 @@ export interface MangaDataType {
   pagination: PaginationType;
 }
 
-interface PaginationType {
+export interface PaginationType {
   last_visible_page: number;
   has_next_page: boolean;
   items: ItemsPaginationType;
 }
 
-interface ItemsPaginationType {
+export interface ItemsPaginationType {
   count: number;
   total: number;
   per_page: number;
@@ -41,48 +41,48 @@ export interface MangaType {
   synopsis: string;
   background: string;
   authors: Array<GlobalObject>;
-  serialization: Array<GlobalObject>;
+  serializationsexport: Array<GlobalObject>;
   genres: Array<GlobalObject>;
   explicit_genres: Array<GlobalObject>;
   themes: Array<GlobalObject>;
   demographics: Array<GlobalObject>;
 }
 
-interface ImagesExtensionType {
+export interface ImagesExtensionType {
   image_url: string;
   small_image_url: string;
   large_image_url: string;
 }
 
-interface ImagesType {
+export interface ImagesType {
   jpg: ImagesExtensionType;
   webp: ImagesExtensionType;
 }
 
-interface TitlesType {
+export interface TitlesType {
   type: string;
   title: string;
 }
 
-interface DateType {
+export interface DateType {
   day: number;
   month: number;
   year: number;
 }
 
-interface PropPublishedType {
+export interface PropPublishedType {
   from: DateType;
   to: DateType;
   string: string;
 }
 
-interface Published {
+export interface Published {
   from: string;
   to: string;
   prop: PropPublishedType;
 }
 
-interface GlobalObject {
+export interface GlobalObject {
   mal_id: number;
   type: string;
   name: string;

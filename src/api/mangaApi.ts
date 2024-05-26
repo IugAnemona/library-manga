@@ -7,4 +7,11 @@ async function getTopMangas(): Promise<MangaDataType> {
   return topMangas;
 }
 
-export { getTopMangas };
+async function mangaInfoLoader(mangaId: string | undefined) {
+  const id = Number(mangaId);
+  const response = await apiJikan.get<MangaDataType>(`/manga/${id}/full`);
+  const mangaInfo = response.data.data;
+  return mangaInfo;
+}
+
+export { getTopMangas, mangaInfoLoader };
