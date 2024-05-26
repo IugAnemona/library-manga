@@ -11,7 +11,7 @@ export const TopMangaCard: React.FC<TopMangaProps> = ({ manga }) => {
     <div className="max-w-80 flex flex-col items-center">
       <div className="">
         <Link to={`manga/${manga.mal_id}`}>
-          <img className="h-40 md:h-50 border-b-2 border-slate-900" src={manga.images.jpg.image_url} />
+          <img className="h-40 md:h-50 border-b-2 border-slate-900" src={manga.images.webp.image_url} />
         </Link>
       </div>
 

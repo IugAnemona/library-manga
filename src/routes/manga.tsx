@@ -9,7 +9,7 @@ export default function MangaInfoPage() {
   return (
     <div className="flex gap-6 max-w-7xl m-auto shadow-md">
       <div className="p-2">
-        <img className="h-[400px]" src={manga.images.jpg.large_image_url}></img>
+        <img className="h-[400px]" src={manga.images.webp.large_image_url}></img>
       </div>
       <div>
         <MangaInfoItem info={manga.title} title="Title" />
