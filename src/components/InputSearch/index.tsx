@@ -16,7 +16,7 @@ export function InputWithDebounce({ value, onChange }: InputSearchType) {
     debounceChange(event.target.value);
   }
   return (
-    <div className="max-w-96 m-auto">
+    <div className="max-w-96 m-auto border-2 border-slate-700 rounded-lg">
       <Input type="search" value={displayValue} onChange={handleChange} />
     </div>
   );
