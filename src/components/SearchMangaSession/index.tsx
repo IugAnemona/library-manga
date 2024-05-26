@@ -15,7 +15,7 @@ export function SearchManga() {
   return (
     <div className="mt-24">
       <InputWithDebounce onChange={logData} value={''} />
-      <div className="mt-6 flex flex-wrap gap-3">
+      <div className="mt-6 flex flex-wrap gap-3 justify-center">
         {mangas?.data.map((manga, index) => {
           return (
             <div className="w-56" key={manga.mal_id + index}>
