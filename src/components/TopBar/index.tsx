@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function TopBar() {
   return (
-    <header className="fixed top-0 left-0 right-0 bg-gray-800 text-white">
+    <header className="fixed top-0 left-0 right-0 bg-gray-800 text-white z-10">
       <nav className="container mx-auto flex items-center justify-between p-4">
         <div className="text-xl font-bold">
           <Link to={'/'} className="text-white">
