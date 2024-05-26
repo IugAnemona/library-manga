@@ -1,18 +1,20 @@
+import { Link } from 'react-router-dom';
+
 export default function TopBar() {
   return (
     <header className="fixed top-0 left-0 right-0 bg-gray-800 text-white">
       <nav className="container mx-auto flex items-center justify-between p-4">
         <div className="text-xl font-bold">
-          <a href="#" className="text-white">
+          <Link to={'/'} className="text-white">
             Library Manga
-          </a>
+          </Link>
         </div>
 
         <ul className="hidden md:flex space-x-4">
           <li>
-            <a href="#" className="hover:text-gray-400">
+            <Link to={'/'} className="hover:text-gray-400">
               Home
-            </a>
+            </Link>
           </li>
         </ul>
 
