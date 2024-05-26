@@ -15,15 +15,17 @@ export function SearchManga() {
   return (
     <div className="mt-24  rounded-md">
       <InputWithDebounce onChange={logData} value={''} />
-      <div className="mt-6 flex flex-wrap gap-6 justify-center px-2 py-6 bg-gray-800 rounded-md">
-        {mangas?.data.map((manga, index) => {
-          return (
-            <div className="" key={manga.mal_id + index}>
-              <CardSearch manga={manga} />
-            </div>
-          );
-        })}
-      </div>
+      {mangas && (
+        <div className="mt-6 flex flex-wrap gap-6 justify-center px-2 py-6 bg-gray-800 rounded-md">
+          {mangas?.data.map((manga) => {
+            return (
+              <div key={manga.mal_id}>
+                <CardSearch manga={manga} />
+              </div>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }
